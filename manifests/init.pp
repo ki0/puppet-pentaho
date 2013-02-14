@@ -377,8 +377,8 @@ class pentaho (
   ### Calculations of variables whoe value depends on different params
   $real_install_source = $pentaho::install_source ? {
     ''      => $pentaho::version ? {
-      ''      => 'http://downloads.sourceforge.net/project/pentaho/Data%20Integration/4.2.1-stable/pdi-ce-4.2.1-stable.zip?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fpentaho%2F&ts=1339192051&use_mirror=heanet',
-      default => "http://downloads.sourceforge.net/project/pentaho/Data%20Integration/${pentaho::version}-stable/pdi-ce-${pentaho::version}-stable.zip?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fpentaho%2F&ts=1339192051&use_mirror=heanet",
+      ''      => 'http://downloads.sourceforge.net/project/pentaho/Data%20Integration/4.2.1-stable/pdi-ce-4.2.1-stable.zip',
+      default => "http://downloads.sourceforge.net/project/pentaho/Data%20Integration/${pentaho::version}-stable/pdi-ce-${pentaho::version}-stable.zip",
     },
     default => $pentaho::install_source,
   }
